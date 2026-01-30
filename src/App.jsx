@@ -8,7 +8,7 @@ import Experience from './sections/Experience';
 import Contact from './sections/Contact';
 import './styles/index.css';
 
-import ButterflyBackground from './components/ButterflyBackground';
+import DiamondBackground from './components/DiamondBackground';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -41,7 +41,7 @@ function App() {
 
   return (
     <div className="app">
-      <ButterflyBackground />
+      <DiamondBackground />
       <Navbar />
       <Hero />
       <About />

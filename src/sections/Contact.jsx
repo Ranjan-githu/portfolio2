@@ -11,7 +11,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="section" style={{ background: 'var(--bg-secondary)' }}>
+    <section id="contact" className="section" style={{ background: '#000000' }}>
       <div className="container" style={{ textAlign: 'center' }}>
         <RevealSection>
           <motion.h2

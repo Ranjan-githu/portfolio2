@@ -1,42 +1,14 @@
-import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Github, ExternalLink } from 'lucide-react';
 import React, { useRef } from 'react';
 import RevealSection from '../components/RevealSection';
 
-// 3D Card Component
-function Card3D({ children, highlight }) {
-  const x = useMotionValue(0);
-  const y = useMotionValue(0);
-
-  const rotateX = useTransform(y, [-100, 100], [30, -30]);
-  const rotateY = useTransform(x, [-100, 100], [-30, 30]);
-
-  function handleMouse(event) {
-    const rect = event.currentTarget.getBoundingClientRect();
-    x.set(event.clientX - rect.left - rect.width / 2);
-    y.set(event.clientY - rect.top - rect.height / 2);
-  }
-
-  function handleMouseLeave() {
-    x.set(0);
-    y.set(0);
-  }
-
+// Simplified Card Component without 3D tilt
+function Card({ children, highlight }) {
   return (
     <motion.div
-      style={{
-        x,
-        y,
-        rotateX,
-        rotateY,
-        z: 100,
-        cursor: 'grab',
-        transformStyle: 'preserve-3d',
-      }}
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ cursor: 'grabbing' }}
-      onMouseMove={handleMouse}
-      onMouseLeave={handleMouseLeave}
+      whileHover={{ y: -10 }}
+      transition={{ type: "spring", stiffness: 300 }}
     >
       <div style={{
         background: 'var(--bg-color)',
@@ -47,8 +19,7 @@ function Card3D({ children, highlight }) {
         height: '100%',
         display: 'flex',
         flexDirection: 'column',
-        transformStyle: 'preserve-3d',
-        position: 'relative' // Important for child 3d
+        position: 'relative'
       }}>
         {children}
       </div>
@@ -91,16 +62,15 @@ const Projects = () => {
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '3rem' }}>
             {projects.map((project, index) => (
-              <div key={index} style={{ perspective: '1000px' }}>
-                <Card3D highlight={project.highlight}>
+              <div key={index}>
+                <Card highlight={project.highlight}>
                   <div style={{
                     height: '200px',
                     background: 'linear-gradient(135deg, #1a1a1a 0%, #0a0a0f 100%)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    borderBottom: '1px solid rgba(255,255,255,0.05)',
-                    transform: 'translateZ(20px)'
+                    borderBottom: '1px solid rgba(255,255,255,0.05)'
                   }}>
                     <span style={{
                       color: 'var(--text-secondary)',
@@ -112,7 +82,7 @@ const Projects = () => {
                     </span>
                   </div>
 
-                  <div style={{ padding: '2rem', flex: 1, display: 'flex', flexDirection: 'column', transform: 'translateZ(30px)' }}>
+                  <div style={{ padding: '2rem', flex: 1, display: 'flex', flexDirection: 'column' }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '1rem' }}>
                       <h3 style={{ fontSize: '1.5rem', color: 'var(--text-primary)' }}>
                         {project.title}
@@ -141,7 +111,7 @@ const Projects = () => {
                       ))}
                     </div>
                   </div>
-                </Card3D>
+                </Card>
               </div>
             ))}
           </div>

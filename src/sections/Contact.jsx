@@ -39,7 +39,7 @@ const Contact = () => {
             >
               <h3 style={{ fontSize: '1.5rem', marginBottom: '2rem' }}>Get in Touch</h3>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-                <a href="mailto:ranjankumar@example.com" style={{ display: 'flex', alignItems: 'center', gap: '1rem', color: 'var(--text-secondary)' }}>
+                <a href="mailto:rahish87701@gmail.com" style={{ display: 'flex', alignItems: 'center', gap: '1rem', color: 'var(--text-secondary)' }}>
                   <div style={{ p: '1rem', background: 'rgba(255,255,255,0.05)', borderRadius: '50%', width: '50px', height: '50px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                     <Mail color="var(--accent-cyan)" />
                   </div>
@@ -48,7 +48,7 @@ const Contact = () => {
                     <div style={{ fontSize: '1.1rem', color: 'var(--text-primary)' }}>ranjankumar@example.com</div>
                   </div>
                 </a>
-                <a href="https://linkedin.com/in/ranjan-kumar-gupta" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '1rem', color: 'var(--text-secondary)' }}>
+                <a href="https://www.linkedin.com/in/ranjan-gupta-ai" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '1rem', color: 'var(--text-secondary)' }}>
                   <div style={{ p: '1rem', background: 'rgba(255,255,255,0.05)', borderRadius: '50%', width: '50px', height: '50px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                     <Linkedin color="var(--accent-violet)" />
                   </div>
@@ -57,7 +57,7 @@ const Contact = () => {
                     <div style={{ fontSize: '1.1rem', color: 'var(--text-primary)' }}>Connect on LinkedIn</div>
                   </div>
                 </a>
-                <a href="https://github.com/ranjan-kumar-gupta" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '1rem', color: 'var(--text-secondary)' }}>
+                <a href="https://github.com/ranjan-githu" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '1rem', color: 'var(--text-secondary)' }}>
                   <div style={{ p: '1rem', background: 'rgba(255,255,255,0.05)', borderRadius: '50%', width: '50px', height: '50px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                     <Github color="var(--text-primary)" />
                   </div>

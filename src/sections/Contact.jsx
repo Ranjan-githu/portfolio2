@@ -39,7 +39,7 @@ const Contact = () => {
             >
               <h3 style={{ fontSize: '1.5rem', marginBottom: '2rem' }}>Get in Touch</h3>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-                <a href="mailto:rahish87701@gmail.com " style={{ display: 'flex', alignItems: 'center', gap: '1rem', color: 'var(--text-secondary)' }}>
+                <a href="mailto: rahish87701@gmail.com " style={{ display: 'flex', alignItems: 'center', gap: '1rem', color: 'var(--text-secondary)' }}>
                   <div style={{ p: '1rem', background: 'rgba(255,255,255,0.05)', borderRadius: '50%', width: '50px', height: '50px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                     <Mail color="var(--accent-cyan)" />
                   </div>

@@ -11,8 +11,8 @@ const Experience = () => {
     },
     {
       role: 'B.Tech in Computer Science',
-      company: 'Current University',
-      period: '2023 - 2027 (Expected)',
+      company: 'Sage University',
+      period: '2024 - 2028 (Expected)',
       description: 'Focusing on Core CS subjects: DSA, OOPs, DBMS, Operating Systems. Engaging in tech fests and coding hackathons.',
     },
     {

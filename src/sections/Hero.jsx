@@ -33,7 +33,7 @@ const Hero = () => {
           }}
         >
           Full-Stack <br />
-          <span className="gradient-text">Developer</span>
+          <span className="gradient-text">Developer </span>
         </motion.h1>
 
         <motion.p
